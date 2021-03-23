@@ -15,6 +15,10 @@ class UserPreferences {
     this._prefs = await SharedPreferences.getInstance();
   }
 
+  deleteToken() async {
+    this._prefs.remove(token);
+  }
+
   get token {
     return _prefs.getString('token') ?? '';
   }
@@ -22,13 +26,4 @@ class UserPreferences {
   set token(String value) {
     _prefs.setString('token', value);
   }
-/*
-  get lastPage {
-    return _prefs.getString('lastPage') ?? 'login-page';
-  }
-
-  set lastPage(String value) {
-    _prefs.setString('lastPage', value);
-  }
-*/
 }

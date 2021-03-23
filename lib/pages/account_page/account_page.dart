@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:shopping_app_firebase/user_preferences/preferences.dart';
 import 'package:shopping_app_firebase/widgets/custom_list_tile.dart';
 
 class AccountPage extends StatelessWidget {
-  const AccountPage({Key key}) : super(key: key);
+  AccountPage({Key key}) : super(key: key);
+
+  final prefs = UserPreferences();
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +70,14 @@ class AccountPage extends StatelessWidget {
             title: "Add some shit",
             onTap: () => Navigator.of(context).pushNamed("add_products_page"),
             iconData: Icons.add,
+          ),
+          CustomListTile(
+            title: "Logout",
+            onTap: () {
+              prefs.deleteToken();
+              Navigator.pushReplacementNamed(context, "login-page");
+            },
+            iconData: Icons.logout,
           )
         ],
       ),
