@@ -16,10 +16,11 @@ import 'package:shopping_app_firebase/widgets/my_behavior.dart';
 
 import 'theme/theme_dart.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final prefs = UserPreferences();
-  await prefs.initPrefs();
+  // It seems like it doesn't work in a physical device because the async/await
+  // in main. But I don't know what to do to fix it
+  await UserPreferences().initPrefs();
   runApp(MyApp());
 }
 
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final prefs = UserPreferences();
+    print(prefs.token);
     return Provider(
       child: MaterialApp(
         builder: (context, child) {
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
         },
         debugShowCheckedModeBanner: false,
         theme: getThemeData(),
-        initialRoute: prefs.token == null ? "login-page" : "/",
+        initialRoute: (prefs.token == '') ? "login-page" : "/",
         onGenerateRoute: (settings) {
           switch (settings.name) {
             case 'login-page':

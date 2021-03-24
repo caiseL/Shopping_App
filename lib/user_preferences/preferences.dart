@@ -16,7 +16,8 @@ class UserPreferences {
   }
 
   deleteToken() async {
-    this._prefs.remove(token);
+    await this._prefs.clear();
+    await this._prefs.remove(token);
   }
 
   get token {

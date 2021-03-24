@@ -16,7 +16,9 @@ class ProductProvider {
         Uri.parse("$urlApi/products.json?auth=${_prefs.token}"),
         body: productModelToJson(product));
     final decodedData = json.decode(resp.body);
+
     print(decodedData);
+
     return true;
   }
 
@@ -25,11 +27,10 @@ class ProductProvider {
         await http.get(Uri.parse("$urlApi/products.json?auth=${_prefs.token}"));
 
     final Map<String, dynamic> decodedData = json.decode(resp.body);
-
     if (decodedData == null) return [];
 
     final List<ProductModel> products = [];
-
+    print(decodedData);
     decodedData.forEach((id, product) {
       final prodTemp = ProductModel.fromJson(product);
       prodTemp.id = id;

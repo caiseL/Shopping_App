@@ -15,18 +15,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   ProductProvider futureProduct = ProductProvider();
-  ScrollController _controller = ScrollController();
 
   final provider = ProductProvider();
   bool connection = true;
   @override
   Widget build(BuildContext context) {
-    _controller.addListener(() {
-      if (_controller.position.pixels >=
-          _controller.position.maxScrollExtent - 200) {
-        futureProduct.getProducts();
-      }
-    });
     Size size = MediaQuery.of(context).size;
     final GlobalKey<ScaffoldState> _scaffoldKey =
         new GlobalKey<ScaffoldState>();
@@ -51,7 +44,6 @@ class _HomePageState extends State<HomePage> {
               ),
               SliverFillRemaining(
                 child: ListView(
-                  controller: _controller,
                   children: [
                     Container(
                       alignment: Alignment.bottomLeft,

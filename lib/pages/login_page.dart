@@ -42,7 +42,6 @@ class LoginPage extends StatelessWidget {
                       labelText: "Email Adress",
                       icon: Icons.email_outlined,
                       isPassword: false,
-                      counterText: snapshot.data,
                       errorText: snapshot.error,
                       onChanged: bloc.changeEmail,
                       keyboardType: TextInputType.emailAddress,
@@ -54,7 +53,6 @@ class LoginPage extends StatelessWidget {
                     return CustomTextField(
                       labelText: "Password",
                       onChanged: bloc.changePassword,
-                      counterText: snapshot.data,
                       errorText: snapshot.error,
                       icon: Icons.lock_outline,
                       isPassword: true,

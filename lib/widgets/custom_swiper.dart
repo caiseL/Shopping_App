@@ -23,7 +23,6 @@ class CustomSwiper extends StatelessWidget {
         ),
         itemBuilder: (context, index) {
           if (index == 0) {
-            print(product.id);
             return Hero(
               tag: product.id,
               child: FadeInImage(

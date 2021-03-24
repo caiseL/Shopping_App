@@ -75,7 +75,8 @@ class AccountPage extends StatelessWidget {
             title: "Logout",
             onTap: () {
               prefs.deleteToken();
-              Navigator.pushReplacementNamed(context, "login-page");
+              Navigator.of(context)
+                  .pushNamedAndRemoveUntil("login-page", (route) => false);
             },
             iconData: Icons.logout,
           )

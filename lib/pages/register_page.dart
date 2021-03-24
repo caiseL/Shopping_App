@@ -41,7 +41,6 @@ class RegisterPage extends StatelessWidget {
                   builder: (context, snapshot) {
                     return CustomTextField(
                       keyboardType: TextInputType.emailAddress,
-                      counterText: snapshot.data,
                       errorText: snapshot.error,
                       labelText: "Email Adress",
                       icon: Icons.email_outlined,
@@ -55,7 +54,6 @@ class RegisterPage extends StatelessWidget {
                   return CustomTextField(
                     keyboardType: TextInputType.text,
                     errorText: snapshot.error,
-                    counterText: snapshot.data,
                     onChanged: bloc.changePassword,
                     labelText: "Password",
                     icon: Icons.lock_outline,

@@ -173,7 +173,7 @@ class _AddProductPageState extends State<AddProductPage> {
 
     ScaffoldMessenger.of(context)
         .showSnackBar(mostrarSnackbar("Product added"));
-    Navigator.of(context).pushNamed("/");
+    Navigator.of(context).pushReplacementNamed("/");
   }
 
   Widget mostrarSnackbar(String text) {
