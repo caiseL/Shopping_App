@@ -1,11 +1,11 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
-import 'package:shopping_app_firebase/config.dart';
 import 'package:shopping_app_firebase/user_preferences/preferences.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class UserProvider {
   final _prefs = UserPreferences();
+  final firebaseToken = dotenv.env['FIREBASE_TOKEN'];
 
   Future<Map<String, dynamic>> login(String email, String password) async {
     final authData = {

@@ -67,7 +67,7 @@ class AccountPage extends StatelessWidget {
             onTap: () {},
           ),
           CustomListTile(
-            title: "Add some shit",
+            title: "Add an article",
             onTap: () => Navigator.of(context).pushNamed("add_products_page"),
             iconData: Icons.add,
           ),

@@ -13,13 +13,14 @@ import 'package:shopping_app_firebase/pages/settings_page.dart';
 import 'package:shopping_app_firebase/user_preferences/preferences.dart';
 import 'package:shopping_app_firebase/widgets/full_screen_dialog.dart';
 import 'package:shopping_app_firebase/widgets/my_behavior.dart';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'theme/theme_dart.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // It seems like it doesn't work in a physical device because the async/await
   // in main. But I don't know what to do to fix it
+  await dotenv.load(fileName: ".env");
   await UserPreferences().initPrefs();
   runApp(MyApp());
 }

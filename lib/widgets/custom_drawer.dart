@@ -30,7 +30,7 @@ class CustomDrawer extends StatelessWidget {
                   Expanded(
                     flex: 9,
                     child: Text(
-                      "Hello, {userNameFirstName}",
+                      "Hello, Jeff Bezos",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                       style: TextStyle(

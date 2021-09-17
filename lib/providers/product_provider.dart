@@ -1,15 +1,17 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
 import 'package:mime_type/mime_type.dart';
-import 'package:shopping_app_firebase/config.dart';
 import 'package:shopping_app_firebase/models/product_model.dart';
 import 'package:shopping_app_firebase/user_preferences/preferences.dart';
 
 class ProductProvider {
   final _prefs = UserPreferences();
+  final cloudService = dotenv.env["CLOUD_SERVICE_API"];
+  final urlApi = dotenv.env["URL_API"];
 
   Future<bool> makeAProduct(ProductModel product) async {
     final resp = await http.post(
@@ -55,9 +57,12 @@ class ProductProvider {
     final resp =
         await http.Response.fromStream(await imageUploadRequest.send());
 
+    print(resp.body);
+
     if (resp.statusCode != 200 && resp.statusCode != 201) {
       return null;
     }
+
     return json.decode(resp.body)["secure_url"];
   }
 }
