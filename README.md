@@ -1,16 +1,18 @@
 # shopping_app_firebase
 
-A new Flutter project.
+A shopping app using Firebase. \
+This is a project I made long ago using Firebase and Cloudinary. It was the first programming project that I was really proud of. \
+The software architecture that I used it's bad and it doesn't have a good documentation because it was the first one, but I think it looks great.
 
-## Getting Started
+-   Posting product photos on Cloudinary used to work but I haven't code on this project in a long time, so it's outdated.
 
-This project is a starting point for a Flutter application.
+<img src="https://i.imgur.com/1BbUv2r.png" alt="Photo mobile app" width="300"/>
 
-A few resources to get you started if this is your first Flutter project:
+<video width="320" height="240" controls>
+  <source src="assets/repo/teaser.mp4" type="video/mp4">
+</video>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![](assets/repo/teaser.mp4)
+![alt text](https://github.com/caiseL/Shopping_App/blob/main/assets/repo/teaser.mp4?raw=true)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[![Shopping App Teaser](https://res.cloudinary.com/marcomontalbano/image/upload/v1631980468/video_to_markdown/images/youtube--y7DUFw17G-A-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/y7DUFw17G-A "Shopping App Teaser")
