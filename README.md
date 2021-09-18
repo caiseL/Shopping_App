@@ -8,11 +8,6 @@ The software architecture that I used it's bad and it doesn't have a good docume
 
 <img src="https://i.imgur.com/1BbUv2r.png" alt="Photo mobile app" width="300"/>
 
-<video width="320" height="240" controls>
-  <source src="assets/repo/teaser.mp4" type="video/mp4">
-</video>
-
-![](assets/repo/teaser.mp4)
-![alt text](https://github.com/caiseL/Shopping_App/blob/main/assets/repo/teaser.mp4?raw=true)
+Video teaser:
 
 [![Shopping App Teaser](https://res.cloudinary.com/marcomontalbano/image/upload/v1631980468/video_to_markdown/images/youtube--y7DUFw17G-A-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/y7DUFw17G-A "Shopping App Teaser")
